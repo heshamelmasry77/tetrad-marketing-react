@@ -6,36 +6,36 @@ import ButtonPill from "../components/ButtonPillPink";
 
 export default function ServiceDigsyn() {
     return (
-        <div className="flex flex-col gap-4 items-center justify-between max-w-serviceCard">
-            <div className="flex flex-col gap-2">
+        <div className="service-card">
+            <div className="service-card_description">
                 <img
-                    className="max-w-hundre mx-auto"
+                    className="service-card_description_img"
                     src={digsyn}
                     alt="graphic illustration"
                 />
-                <h3 className="text-trettito font-semibold text-center">
+                <h3 className="service-card_description_heading">
                     Organisk Synlighet
                 </h3>
-                <p className="font-semibold opacity-50 text-center">
+                <p className="service-card_description_text">
                     Ønsker du mer organisk trafikk til nettstedet ditt og
                     sosiale medier?
                 </p>
             </div>
-            <div className="flex flex-col gap-2">
-                <div className="flex gap-[6px] items-center">
+            <div className="service-card_content">
+                <div className="service-card_content_bullet">
                     <img src={branding} alt="facebook logo" />
                     <span>Branding</span>
                 </div>
-                <div className="flex gap-[6px] items-center">
+                <div className="service-card_content_bullet">
                     <img src={somedia} alt="instagram logo" />
                     <span>Sosiale Media</span>
                 </div>
-                <div className="flex gap-[6px] items-center">
+                <div className="service-card_content_bullet">
                     <img src={seo} alt="linkedin logo" />
                     <span>SEO</span>
                 </div>
             </div>
-            <ButtonPill linkAction="digsynAction" content="Mer info" />
+            <ButtonPill linkAction="/orgsyn" content="Mer info" />
         </div>
     );
 }

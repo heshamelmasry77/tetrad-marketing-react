@@ -2,7 +2,7 @@ import zebraSquare from "../assets/zebra-square.png";
 
 export default function Welcome() {
     return (
-        <div className="inner flex gap-4 pb-16">
+        <div className="inner flex gap-4">
             <div className="flex-1 relative overflow-clip">
                 <img
                     className="absolute min-h-full mt-[-2px] object-left object-cover "

@@ -14,9 +14,61 @@ body {
 }
 .inner {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1032px;
     margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
-p {
+input {
+    background-color: transparent;
+}
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+p,
+.text-montserrat {
     font-family: "Montserrat", sans-serif;
 }
+/*
+Utilities
+*/
+.border-input-radius {
+    border-radius: 0px 24px 24px 0px;
+}
+/*___________________________________________
+
+SERVICE CARDS
+_____________________________________________
+_____________________________________________*/
+.service-cards-wrapper {
+    @apply inner flex flex-col smScreen:grid smScreen:grid-cols-2 gap-16 maxScreen:flex maxScreen:flex-row maxScreen:justify-between;
+}
+.service-cards-wrapper-only-two {
+    @apply inner flex flex-col smScreen:grid smScreen:grid-cols-2 gap-16 maxScreen:flex maxScreen:flex-row maxScreen:justify-around;
+}
+.service-card {
+    @apply flex flex-col gap-4 items-center justify-between min-w-serviceCard max-w-serviceCard smScreen:mx-auto maxScreen:mx-0;
+}
+.service-card_description {
+    @apply flex flex-col gap-2;
+}
+.service-card_description_img {
+    @apply max-w-hundre mx-auto;
+}
+.service-card_description_heading {
+    @apply text-trettito font-semibold text-center;
+}
+.service-card_description_text {
+    @apply font-semibold opacity-50 text-center;
+}
+.service-card_content {
+    @apply flex flex-col gap-2;
+}
+.service-card_content_bullet {
+    @apply flex gap-[6px] items-center;
+}
+/*___________________________________________
+_____________________________________________
+SERVICE CARDS
+_____________________________________________*/

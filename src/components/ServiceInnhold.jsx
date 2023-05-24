@@ -6,36 +6,36 @@ import ButtonPill from "../components/ButtonPillPink";
 
 export default function ServiceInnhold() {
     return (
-        <div className="flex flex-col gap-4 items-center justify-between max-w-serviceCard">
-            <div className="flex flex-col gap-2">
+        <div className="service-card">
+            <div className="service-card_description">
                 <img
-                    className="max-w-hundre mx-auto"
+                    className="service-card_description_img"
                     src={innhold}
                     alt="graphic illustration"
                 />
-                <h3 className="text-trettito font-semibold text-center">
+                <h3 className="service-card_description_heading">
                     Innholdsproduksjon
                 </h3>
-                <p className="font-semibold opacity-50 text-center">
+                <p className="service-card_description_text">
                     Ønsker du unikt innhold skreddersydd til din strategi og
                     merkevare?
                 </p>
             </div>
-            <div className="flex flex-col gap-2">
-                <div className="flex gap-[6px] items-center">
+            <div className="service-card_content">
+                <div className="service-card_content_bullet">
                     <img src={codeSlash} alt="facebook logo" />
                     <span>Nettside & CMS</span>
                 </div>
-                <div className="flex gap-[6px] items-center">
+                <div className="service-card_content_bullet">
                     <img src={paletteFill} alt="instagram logo" />
                     <span>Grafisk innhold</span>
                 </div>
-                <div className="flex gap-[6px] items-center">
+                <div className="service-card_content_bullet">
                     <img src={textIcon} alt="linkedin logo" />
                     <span>Tekstforfatting</span>
                 </div>
             </div>
-            <ButtonPill linkAction="innholdAction" content="Mer info" />
+            <ButtonPill linkAction="/innprod" content="Mer info" />
         </div>
     );
 }

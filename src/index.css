@@ -9,7 +9,19 @@
 :root {
     font-family: "Outfit", sans-serif;
 }
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+span::selection,
+a::selection,
+button::selection,
+input::selection {
+    @apply bg-pink text-white;
+}
 body {
+    max-width: 100vw;
+    overflow-x: hidden;
     @apply bg-black text-white;
 }
 .inner {
@@ -18,6 +30,19 @@ body {
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
+}
+.hover-navigation-link > div > a:hover,
+.hover-navigation-link > span:hover,
+.hover-navigation-link > a:hover {
+    @apply text-pink font-bold;
+}
+.hover-navigation-link {
+    min-width: clamp(100%, 420px);
+}
+a,
+details,
+summary {
+    transition: color 0.2s ease-in;
 }
 input {
     background-color: transparent;
@@ -45,7 +70,7 @@ _____________________________________________*/
     @apply inner flex flex-col smScreen:grid smScreen:grid-cols-2 gap-16 maxScreen:flex maxScreen:flex-row maxScreen:justify-between;
 }
 .service-cards-wrapper-only-two {
-    @apply inner flex flex-col smScreen:grid smScreen:grid-cols-2 gap-16 maxScreen:flex maxScreen:flex-row maxScreen:justify-around;
+    @apply inner flex flex-col smScreen:grid smScreen:grid-cols-2 gap-16 maxScreen:flex maxScreen:flex-row maxScreen:justify-around pb-16;
 }
 .service-card {
     @apply flex flex-col gap-4 items-center justify-between min-w-serviceCard max-w-serviceCard smScreen:mx-auto maxScreen:mx-0;

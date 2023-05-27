@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { auth } from "./firebase";
 import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import { Routes, Route, Navigate, Link } from "react-router-dom";
 import OrganiskSynlighet from "./pages/OrganiskSynlighet";
-import Landing from "./pages/Landing";
+import Landing from "./landingpage/Landing";
 import InnholdsProduksjon from "./pages/InnholdsProduksjon";
 import MarkedsForing from "./pages/MarkedsForing";
 import Signup from "./pages/Signup";

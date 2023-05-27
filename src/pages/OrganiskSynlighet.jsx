@@ -4,16 +4,31 @@ import branding from "../assets/icons/PaintBucket.svg";
 import seo from "../assets/icons/Cursor.svg";
 import ServiceInnhold from "../components/ServiceInnhold";
 import ServiceMarkeds from "../components/ServiceMarkeds";
+import { Link } from "react-router-dom";
 
 export default function OrganiskSynlighet() {
     return (
-        <div className="inner">
-            <img
-                className="mt-32 mx-auto h-48"
-                src={digsyn}
-                alt="graphic ilustration"
-            />
-            <h1 className="text-center py-16 text-5xl">Organisk Synlighet</h1>
+        <div className="inner flex flex-col gap-8">
+            <div className=" maxScreen:service-cards-wrapper-only-two flex-row maxScreen:flex py-16">
+                <div className="maxScreen:flex hidden">
+                    <ServiceInnhold />
+                </div>
+
+                <div className="flex flex-col mt-auto gap-8">
+                    <img
+                        className=" h-48"
+                        src={digsyn}
+                        alt="graphic ilustration"
+                    />
+                    <h1 className="text-center pt-8 text-5xl whitespace-nowrap">
+                        Organisk Synlighet
+                    </h1>
+                </div>
+                <div className="maxScreen:flex hidden">
+                    <ServiceMarkeds />
+                </div>
+            </div>
+
             <div className="flex flex-col gap-8">
                 <p className="font-semibold opacity-50">
                     Selv om det finnes mange måter å tiltrekke trafikk til et
@@ -55,13 +70,10 @@ export default function OrganiskSynlighet() {
                         </h3>
                         <p className="font-semibold">
                             Sosiale medier kan også være en viktig faktor for å
-                            øke organisk trafikk til nettstedet ditt. Ved å
-                            bygge opp en tilstedeværelse på sosiale medier kan
-                            du øke merkevarebevisstheten, øke synligheten av
-                            innholdet ditt, og engasjere med følgere og
-                            potensielle kunder. Det er viktig å velge de riktige
-                            sosiale mediene som passer for din virksomhet og din
-                            målgruppe.
+                            øke organisk trafikk til nettstedet ditt. Ved å dele
+                            innhold som engasjerer og interesserer publikum, kan
+                            du tiltrekke seg mer trafikk og øke synligheten på
+                            søkemotorer.
                         </p>
                     </div>
                     <div className="flex-1 gap-2 max-w-pMax">
@@ -74,29 +86,35 @@ export default function OrganiskSynlighet() {
                             SEO
                         </h3>
                         <p className="font-semibold">
-                            Hvis du ønsker mer organisk trafikk til nettstedet
-                            ditt og sosiale medier, er det viktig å ha god
-                            organisk synlighet og optimalisere for søkemotorer
-                            gjennom SEO-teknikker. SEO står for "Search Engine
-                            Optimization", og refererer til en rekke teknikker
-                            som brukes for å optimalisere nettsider for
-                            søkemotorer. Dette inkluderer blant annet å bruke de
-                            riktige søkeordene, optimalisere nettstedets innhold
-                            og struktur, og bygge kvalitetslenker.
+                            Søkemotoroptimalisering (SEO) er en av de mest
+                            effektive måtene å øke organisk synlighet og trafikk
+                            på. SEO handler om å optimalisere nettstedet ditt
+                            slik at det rangerer høyere på søkemotorer. Dette
+                            kan inkludere å bruke relevante nøkkelord, skape
+                            kvalitetsinnhold og sikre at nettstedet ditt er
+                            teknisk lyd.
                         </p>
                     </div>
                 </div>
-                <p className="mb-32 font-semibold opacity-50 max-w-pMax">
-                    For å oppnå økt organisk trafikk og synlighet er det viktig
-                    å implementere en helhetlig strategi som tar hensyn til SEO,
-                    branding og sosiale medier. Ved å bruke disse teknikkene kan
-                    du tiltrekke deg flere besøkende til nettstedet ditt og øke
-                    sjansen for at de konverterer til kunder.
-                </p>
-            </div>
-            <div className=" service-cards-wrapper-only-two">
-                <ServiceInnhold />
-                <ServiceMarkeds />
+                <div className="flex w-full flex-col gap-4 maxScreen:flex-row">
+                    <p className="maxScreen:mb-32 font-semibold opacity-50 max-w-pMax">
+                        Med god organisk synlighet kan du tiltrekke deg mer
+                        trafikk, øke merkevarebevissthet og forbedre
+                        konverteringsrater. I DigSyn fokuserer vi på å øke
+                        organisk synlighet for våre kunder gjennom effektiv
+                        søkemotoroptimalisering, sosiale medier og branding.
+                    </p>
+                    <Link
+                        to="/kontakt"
+                        className="max-w-[180px] w-full h-[50px] maxScreen:ml-auto grid place-items-center bg-green text-black rounded-full  font-semibold text-xl"
+                    >
+                        Contact Us
+                    </Link>
+                </div>
+                <div className="service-cards-wrapper-only-two maxScreen:hidden py-32">
+                    <ServiceInnhold />
+                    <ServiceMarkeds />
+                </div>
             </div>
         </div>
     );

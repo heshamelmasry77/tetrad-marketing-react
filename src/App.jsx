@@ -7,8 +7,8 @@ import OrganiskSynlighet from "./pages/OrganiskSynlighet";
 import Landing from "./landingpage/Landing";
 import InnholdsProduksjon from "./pages/InnholdsProduksjon";
 import MarkedsForing from "./pages/MarkedsForing";
-import Login from "./pages/login";
 import Signup from "./pages/Signup";
+import Login from "./pages/login";
 import AdminPanel from "./pages/adminPanel";
 import Blog from "./pages/Blog";
 import NewPost from "./pages/NewPost";
@@ -41,12 +41,11 @@ function App() {
                 <Route path="/orgsyn" element={<OrganiskSynlighet />} />
                 <Route path="/marfor" element={<MarkedsForing />} />
                 <Route path="/innprod" element={<InnholdsProduksjon />} />
-
+                <Route path="/login" element={<Login />} />
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/kontakt" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:id" element={<Post />} />
-                <Route path="/Login" element={<Login />} />
                 <Route
                     path="/signup"
                     element={isLoggedIn ? <Signup /> : <Navigate to="/login" />}

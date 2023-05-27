@@ -8,7 +8,7 @@ import Landing from "./landingpage/Landing";
 import InnholdsProduksjon from "./pages/InnholdsProduksjon";
 import MarkedsForing from "./pages/MarkedsForing";
 import Signup from "./pages/Signup";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import AdminPanel from "./pages/adminPanel";
 import Blog from "./pages/Blog";
 import NewPost from "./pages/NewPost";

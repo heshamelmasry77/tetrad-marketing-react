@@ -46,7 +46,7 @@ function App() {
                 <Route path="/kontakt" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:id" element={<Post />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/Login" element={<Login />} />
                 <Route
                     path="/signup"
                     element={isLoggedIn ? <Signup /> : <Navigate to="/login" />}

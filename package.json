@@ -10,7 +10,6 @@
     },
     "dependencies": {
         "@google-cloud/storage": "^6.10.1",
-        "@tailwindcss/line-clamp": "^0.4.4",
         "bootstrap-icons": "^1.10.5",
         "firebase": "^9.22.0",
         "framer-motion": "^10.12.16",

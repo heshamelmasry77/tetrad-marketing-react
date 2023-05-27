@@ -102,7 +102,7 @@ function Footer() {
                                 </Link>
                             </div>
                         </details>
-                        <Link className="hover:text-white" to="/login">
+                        <Link className="hover:text-white" to="/Login">
                             Admin
                         </Link>
                     </div>

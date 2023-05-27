@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Contact() {
     return (
-        <div id="kontakt" className="inner py-32 flex flex-col gap-16">
+        <div id="kontakt" className="inner pb-32 flex flex-col gap-16">
             <div className="flex flex-col gap-4">
                 <h2 className="service-heading text-5xl font-bold w-fit border-b-green border-b-4 pb-2 ">
-                    Kontakt Tetrad Marketing
+                    Kontakt Oss
                 </h2>
                 <p className="text-offWhite max-w-pMax">
                     Vi vil gjerne høre fra deg! Vennligst send oss en e-post
@@ -18,48 +18,69 @@ export default function Contact() {
                     <h3 className="text-trettito font-semibold">
                         Tetrad kontaker deg!
                     </h3>
-                    <div className="flex flex-col">
-                        <label htmlFor="firma" className="text-xl text-White">
-                            Firma
-                        </label>
-                        <input
-                            type="text"
-                            id="firma"
-                            className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
-                        />
+                    <div className="flex flex-col gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full">
+                            <div className="flex flex-1 flex-col">
+                                <label
+                                    htmlFor="firma"
+                                    className="text-xl text-offWhite"
+                                >
+                                    Kontaktperson *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="firma"
+                                    className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
+                                />
+                            </div>
+                            <div className="flex flex-1 flex-col">
+                                <label
+                                    htmlFor="firma"
+                                    className="text-xl text-offWhite"
+                                >
+                                    Firma
+                                </label>
+                                <input
+                                    type="text"
+                                    id="firma"
+                                    className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
+                                />
+                            </div>
+                        </div>
+                        <div className="flex gap-4 flex-col flex-1">
+                            <div className="flex flex-col">
+                                <label
+                                    htmlFor="firma"
+                                    className="text-xl text-offWhite"
+                                >
+                                    Kontakt e-post *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="firma"
+                                    className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <label
+                                    htmlFor="firma"
+                                    className="text-xl text-offWhite"
+                                >
+                                    Kontakt Telefon
+                                </label>
+                                <input
+                                    type="text"
+                                    id="firma"
+                                    className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
+                                />
+                            </div>
+                        </div>
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="firma" className="text-xl text-White">
-                            Navn på kontaktperson
-                        </label>
-                        <input
-                            type="text"
-                            id="firma"
-                            className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
-                        />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="firma" className="text-xl text-White">
-                            Kontakt e-post
-                        </label>
-                        <input
-                            type="text"
-                            id="firma"
-                            className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
-                        />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="firma" className="text-xl text-White">
-                            Kontakt Telefon
-                        </label>
-                        <input
-                            type="text"
-                            id="firma"
-                            className="border-input-radius bg-black p-3 border-2 border-offWhite placeholder:text-offWhite placeholder:hover:text-white hover:border-white target:border-white placeholder:target:placeholder-white selection:border-white placeholder:selection:placeholder-white text-xl"
-                        />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="firma" className="text-xl text-White">
+                        <label
+                            htmlFor="firma"
+                            className="text-xl text-offWhite"
+                        >
                             Melding til Tetrad
                         </label>
                         <textarea
@@ -67,10 +88,16 @@ export default function Contact() {
                             name=""
                             id=""
                         ></textarea>
+                        <span className="font-bold text-offWhite text-xs">
+                            (Vi kontakter deg om du lar feltet stå tomt)
+                        </span>
                     </div>
                     <button className="w-[180px] h-[50px] grid place-items-center bg-green text-black rounded-full font-semibold text-xl">
                         Kontakt meg
                     </button>
+                    <span className="font-bold text-offWhite text-xs">
+                        * Må fylles ut *
+                    </span>
                 </div>
                 <div className="flex flex-col gap-4 ">
                     <h3 className="text-trettito font-semibold">

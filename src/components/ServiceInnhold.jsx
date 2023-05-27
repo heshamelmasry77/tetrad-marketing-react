@@ -17,7 +17,7 @@ export default function ServiceInnhold() {
                     Innholdsproduksjon
                 </h3>
                 <p className="service-card_description_text">
-                    Ønsker du unikt innhold skreddersydd til din strategi og
+                    Ønsker du innhold skreddersydd til din strategi og
                     merkevare?
                 </p>
             </div>

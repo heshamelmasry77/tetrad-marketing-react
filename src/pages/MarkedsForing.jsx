@@ -4,16 +4,29 @@ import hubspot from "../assets/icons/hubspot.svg";
 import markedsanalyse from "../assets/icons/Search.svg";
 import ServiceDigsyn from "../components/ServiceDigsyn";
 import ServiceInnhold from "../components/ServiceInnhold";
+import { Link } from "react-router-dom";
 
 export default function MarkedsForing() {
     return (
-        <div className="inner">
-            <img
-                className="mt-32 mx-auto h-48"
-                src={markeds}
-                alt="graphic ilustration"
-            />
-            <h1 className="text-center py-16 text-5xl">Markedsføring</h1>
+        <div className="inner flex flex-col gap-8">
+            <div className=" maxScreen:service-cards-wrapper-only-two justify-between maxScreen:flex py-16">
+                <div className="maxScreen:flex hidden">
+                    <ServiceDigsyn />
+                </div>
+
+                <div className="flex flex-col mt-auto gap-8">
+                    <img
+                        className=" mx-auto  h-48"
+                        src={markeds}
+                        alt="graphic ilustration"
+                    />
+                    <h1 className="text-center pt-8 text-5xl">Markedsføring</h1>{" "}
+                </div>
+                <div className="maxScreen:flex hidden">
+                    <ServiceInnhold />
+                </div>
+            </div>
+
             <div className="flex flex-col gap-8">
                 <p className="font-semibold opacity-50">
                     Selv om det finnes mange måter å tiltrekke trafikk til et
@@ -95,17 +108,27 @@ export default function MarkedsForing() {
                         </p>
                     </div>
                 </div>
-                <p className="mb-32 font-semibold opacity-50 max-w-pMax">
-                    Vi tilbyr en rekke tjenester som kan hjelpe deg med å nå
-                    dine mål. Teamet vårt har den nødvendige kunnskapen for å
-                    utvikle en skreddersydd markedsføringsstrategi som passer
-                    perfekt til dine behov. Vi står alltid klare til å svare på
-                    dine spørsmål og hjelpe deg videre på veien mot suksess.
-                </p>
-            </div>
-            <div className=" service-cards-wrapper-only-two">
-                <ServiceDigsyn />
-                <ServiceInnhold />
+                <div className="flex w-full flex-col maxScreen:flex-row">
+                    <p className="mb-32 font-semibold opacity-50 max-w-pMax">
+                        Vi tilbyr en rekke tjenester som kan hjelpe deg med å nå
+                        dine mål. Teamet vårt har den nødvendige kunnskapen for
+                        å utvikle en skreddersydd markedsføringsstrategi som
+                        passer perfekt til dine behov. Vi står alltid klare til
+                        å svare på dine spørsmål og hjelpe deg videre på veien
+                        mot suksess.
+                    </p>
+                    <Link
+                        to="/kontakt"
+                        className="max-w-[180px] w-full h-[50px] ml-auto grid place-items-center bg-green
+                    text-black rounded-full  font-semibold text-xl"
+                    >
+                        Contact Us
+                    </Link>
+                </div>
+                <div className=" service-cards-wrapper-only-two maxScreen:hidden py-32">
+                    <ServiceDigsyn />
+                    <ServiceInnhold />
+                </div>
             </div>
         </div>
     );
